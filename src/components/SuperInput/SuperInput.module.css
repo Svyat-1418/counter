@@ -1,0 +1,80 @@
+.container {
+    width: 80%;
+    padding: 20px;
+}
+
+.inputBox {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    color: #45f3ff;
+}
+
+.inputBox .superInput,
+.inputBox .errorInput {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    z-index: 1;
+    outline: none;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    pointer-events: none;
+    padding: 0 10px;
+    transition: .5s;
+    display: block;
+}
+
+.inputBox .superInput:focus + .text,
+.inputBox .superInput:valid + .text,
+.inputBox .errorInput:focus + .text,
+.inputBox .errorInput:valid + .text {
+    top: -35px;
+    left: -10px;
+}
+
+.inputBox .line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    pointer-events: none;
+    background: rgba(69, 243, 255, 0.6);
+    border-radius: 2px;
+    display: block;
+    transition: .5s;
+}
+
+.inputBox .errorInput ~ .line {
+    background: #7b0a0a;
+}
+
+.inputBox .superInput:focus ~ .line,
+.inputBox .superInput:valid ~ .line,
+.inputBox .errorInput:focus ~ .line,
+.inputBox .errorInput:valid ~ .line {
+    height: 100%;
+}
+
+
+.superInput {
+}
+
+.errorInput {
+}
+
+.error {
+    color: red;
+}
