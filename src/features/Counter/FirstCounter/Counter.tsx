@@ -1,11 +1,12 @@
-import React, {ChangeEvent, useState} from "react";
+import React, {ChangeEvent} from "react";
 import styles from "./Counter.module.css"
-import SuperInput from "../../components/SuperInput/SuperInput";
-import SuperButton from "../../components/SuperButton/SuperButton";
+import SuperInput from "../../../components/SuperInput/SuperInput";
+import SuperButton from "../../../components/SuperButton/SuperButton";
 
 type PropsType = {
     count: number
-    error: string | null
+    errorMinValue: string | null
+    errorMaxValue: string | null
     minValue: number
     maxValue: number
     onClickIncrement: () => void
@@ -17,8 +18,8 @@ type PropsType = {
 
 export const Counter = (
     {
-        count, minValue, maxValue, error,
-        onClickIncrement, onClickSet, onClickReset,
+        count, minValue, maxValue, errorMinValue,
+        errorMaxValue, onClickIncrement, onClickSet, onClickReset,
         onChangeMinValue, onChangeMaxValue
     }: PropsType) => {
     return (
@@ -29,12 +30,12 @@ export const Counter = (
                     <SuperInput value={maxValue}
                                 onChange={onChangeMaxValue}
                                 textInsideInput={"Enter max value"}
-                                error={error}
+                                error={errorMaxValue}
                     />
                     <SuperInput value={minValue}
                                 onChange={onChangeMinValue}
                                 textInsideInput={"Enter min value"}
-                                error={error}
+                                error={errorMinValue}
                     />
                     <div className={styles.btnWrap}>
                         <SuperButton
@@ -62,7 +63,7 @@ export const Counter = (
                     </div>
                     <div className={styles.btnWrap}>
                         <SuperButton disabled={count === maxValue} onClick={onClickIncrement}>Increment</SuperButton>
-                        <SuperButton disabled={count === 0} onClick={onClickReset}>Reset</SuperButton>
+                        <SuperButton disabled={count === minValue} onClick={onClickReset}>Reset</SuperButton>
                     </div>
                 </div>
             </div>

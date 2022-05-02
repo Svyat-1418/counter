@@ -1,0 +1,35 @@
+.default{
+    border: 2px solid #4b6eff;
+    color: #4b6eff;
+}
+.default:hover,
+.default.active{
+    background: #4b6eff;
+    color: whitesmoke;
+}
+.red {
+    border: 2px solid #dd1212;
+    color: #dd1212;
+}
+.red:hover,
+.red.active {
+    background: #dd1212;
+    color: whitesmoke;
+}
+
+
+.btn{
+    font-weight: bold;
+    display: block;
+    margin: 15px 0;
+    padding: 7px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    cursor: pointer;
+}
+.btn:disabled {
+    color: rgba(255, 255, 255, .25);
+}
+
+

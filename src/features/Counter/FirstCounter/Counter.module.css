@@ -18,7 +18,7 @@
     border-radius: 10px;
 }
 .counterSettings{
-    min-height: 350px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -28,7 +28,7 @@
 }
 
 .counterWindowWrap{
-    min-height: 350px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -47,7 +47,7 @@
 }
 .counterWindow{
     width: 350px;
-    min-height: 200px;
+    height: 100px;
     padding: 5px;
     justify-content: center;
     flex-wrap: wrap;

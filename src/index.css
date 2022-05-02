@@ -1,4 +1,11 @@
 body {
+  background-image: url("./w1500_36988694.jpg") ;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
